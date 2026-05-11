@@ -2,7 +2,7 @@ import { Application, extend } from '@pixi/react';
 import { Assets, Container, Sprite, Graphics, Text, TextStyle, Texture } from 'pixi.js';
 import { useState, useEffect, useCallback, useRef } from 'react';
 
-// 1. Extend the elements you need
+// Extend the elements
 extend({
   Container,
   Sprite,
@@ -41,7 +41,7 @@ const EntityRadar = () => {
     return () => cancelAnimationFrame(frame);
   }, []);
 
-  // Professional way to handle background or grid drawing
+  // Handle background or grid drawing
   const drawGrid = useCallback((g: Graphics) => {
     g.clear();
     g.setStrokeStyle({ width: 2, color: 0x333333 });
